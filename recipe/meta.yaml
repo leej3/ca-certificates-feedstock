@@ -17,8 +17,8 @@ build:
   always_include_files:
     - ssl/cert.pem                # [unix]
     - ssl/cacert.pem              # [unix]
-    - Library\\ssl\\cert.pem      # [win]
-    - Library\\ssl\\cacert.pem    # [win]
+    - Library/ssl/cert.pem        # [win]
+    - Library/ssl/cacert.pem      # [win]
 
 requirements:
   build:
