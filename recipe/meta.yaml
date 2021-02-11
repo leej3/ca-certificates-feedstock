@@ -9,7 +9,14 @@ source:
   sha256: 1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c
 
 build:
+{% if bootstrapping == 'yes' %}
+  # Please increment by two
   number: 0
+  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}_bootstrapping
+{% else %}
+  # Keep above the number of the _bootstrapping package
+  number: 1
+{% endif %}
 
 {% if bootstrapping != 'yes' %}
 test:
